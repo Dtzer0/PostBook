@@ -1,0 +1,6 @@
+framework module Pods_hightonB {
+  umbrella header "Pods-hightonB-umbrella.h"
+
+  export *
+  module * { export * }
+}

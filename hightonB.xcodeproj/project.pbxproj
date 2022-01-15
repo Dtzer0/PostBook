@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6BC4338CF8631EF3D3D1A5B /* Pods_hightonB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D8449DCBF01489563D0FF5 /* Pods_hightonB.framework */; };
 		EC56F1ED27928B3B00B3EF27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F1EC27928B3B00B3EF27 /* AppDelegate.swift */; };
 		EC56F1EF27928B3B00B3EF27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F1EE27928B3B00B3EF27 /* SceneDelegate.swift */; };
 		EC56F1F127928B3B00B3EF27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F1F027928B3B00B3EF27 /* ViewController.swift */; };
@@ -17,9 +18,14 @@
 		EC56F20B2792A46C00B3EF27 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F20A2792A46C00B3EF27 /* BookViewController.swift */; };
 		EC56F20D2792B51B00B3EF27 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F20C2792B51B00B3EF27 /* AddViewController.swift */; };
 		EC56F20F2792BA0800B3EF27 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F20E2792BA0800B3EF27 /* ProfileViewController.swift */; };
+		EC56F2162792EA5800B3EF27 /* books.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F2152792EA5800B3EF27 /* books.swift */; };
+		EC56F2182792F34300B3EF27 /* log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F2172792F34300B3EF27 /* log.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37D8449DCBF01489563D0FF5 /* Pods_hightonB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hightonB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F43A46354F1969228722A0D /* Pods-hightonB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hightonB.debug.xcconfig"; path = "Target Support Files/Pods-hightonB/Pods-hightonB.debug.xcconfig"; sourceTree = "<group>"; };
+		C30B963563AA01A76A6C420E /* Pods-hightonB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hightonB.release.xcconfig"; path = "Target Support Files/Pods-hightonB/Pods-hightonB.release.xcconfig"; sourceTree = "<group>"; };
 		EC56F1E927928B3B00B3EF27 /* hightonB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hightonB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC56F1EC27928B3B00B3EF27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC56F1EE27928B3B00B3EF27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +38,8 @@
 		EC56F20A2792A46C00B3EF27 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		EC56F20C2792B51B00B3EF27 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		EC56F20E2792BA0800B3EF27 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EC56F2152792EA5800B3EF27 /* books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = books.swift; sourceTree = "<group>"; };
+		EC56F2172792F34300B3EF27 /* log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = log.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6BC4338CF8631EF3D3D1A5B /* Pods_hightonB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A83929A0CA83058C0EEE723 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37D8449DCBF01489563D0FF5 /* Pods_hightonB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFBE30E89BCA2C099A748F2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F43A46354F1969228722A0D /* Pods-hightonB.debug.xcconfig */,
+				C30B963563AA01A76A6C420E /* Pods-hightonB.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EC56F1E027928B3B00B3EF27 = {
 			isa = PBXGroup;
 			children = (
 				EC56F1EB27928B3B00B3EF27 /* hightonB */,
 				EC56F1EA27928B3B00B3EF27 /* Products */,
+				BFBE30E89BCA2C099A748F2E /* Pods */,
+				6A83929A0CA83058C0EEE723 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +92,7 @@
 		EC56F1EB27928B3B00B3EF27 /* hightonB */ = {
 			isa = PBXGroup;
 			children = (
+				EC56F2142792EA4300B3EF27 /* Model */,
 				EC56F2052792A42300B3EF27 /* View */,
 				EC56F1EC27928B3B00B3EF27 /* AppDelegate.swift */,
 				EC56F1EE27928B3B00B3EF27 /* SceneDelegate.swift */,
@@ -119,6 +148,15 @@
 			path = LogIn;
 			sourceTree = "<group>";
 		};
+		EC56F2142792EA4300B3EF27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC56F2152792EA5800B3EF27 /* books.swift */,
+				EC56F2172792F34300B3EF27 /* log.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC56F20027928B3D00B3EF27 /* Build configuration list for PBXNativeTarget "hightonB" */;
 			buildPhases = (
+				4CF617C3085E00E791F91AC1 /* [CP] Check Pods Manifest.lock */,
 				EC56F1E527928B3B00B3EF27 /* Sources */,
 				EC56F1E627928B3B00B3EF27 /* Frameworks */,
 				EC56F1E727928B3B00B3EF27 /* Resources */,
+				900C442A9AD952318D638F0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,6 +225,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4CF617C3085E00E791F91AC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hightonB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		900C442A9AD952318D638F0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hightonB/Pods-hightonB-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hightonB/Pods-hightonB-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hightonB/Pods-hightonB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EC56F1E527928B3B00B3EF27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -194,6 +276,8 @@
 				EC56F1F127928B3B00B3EF27 /* ViewController.swift in Sources */,
 				EC56F20D2792B51B00B3EF27 /* AddViewController.swift in Sources */,
 				EC56F20B2792A46C00B3EF27 /* BookViewController.swift in Sources */,
+				EC56F2182792F34300B3EF27 /* log.swift in Sources */,
+				EC56F2162792EA5800B3EF27 /* books.swift in Sources */,
 				EC56F20F2792BA0800B3EF27 /* ProfileViewController.swift in Sources */,
 				EC56F1ED27928B3B00B3EF27 /* AppDelegate.swift in Sources */,
 				EC56F1EF27928B3B00B3EF27 /* SceneDelegate.swift in Sources */,
@@ -340,6 +424,7 @@
 		};
 		EC56F20127928B3D00B3EF27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F43A46354F1969228722A0D /* Pods-hightonB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -368,6 +453,7 @@
 		};
 		EC56F20227928B3D00B3EF27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C30B963563AA01A76A6C420E /* Pods-hightonB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

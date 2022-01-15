@@ -7,4 +7,8 @@ target 'hightonB' do
 
   # Pods for hightonB
 
+  pod 'Moya/RxSwift', '~> 15.0'
+
+  pod 'RxSwift'
+
 end

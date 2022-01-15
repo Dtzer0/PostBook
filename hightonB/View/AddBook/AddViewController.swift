@@ -12,6 +12,7 @@ class AddViewController: UIViewController {
     @IBOutlet weak var bookName: UITextField!
     @IBOutlet weak var bookWriter: UITextField!
     @IBOutlet weak var bookPrice: UITextField!
+    @IBOutlet weak var userName: UITextField!
     
     @IBAction func addBooks(_ sender: Any) {
         
@@ -53,11 +54,25 @@ class AddViewController: UIViewController {
             
             return
         }
+        guard let utext = userName.text, utext.count > 0 else {
+            //단, 가격은 Int형으로 받아야하는데.. 일단 그것은 보류 ( 사용자의 장난이나 실수도 고려해야한다 )
+            let emptytxt = UIAlertController(title: "안내", message: "빈칸을 채워주세요 :(", preferredStyle: .alert)
+            
+            let backact = UIAlertAction(title: "네", style: .cancel) { (action) in
+                
+            }
+            
+            emptytxt.addAction(backact)
+            present(emptytxt, animated: true, completion: nil)
+            
+            return
+        }
         
         //형식에 맞게 모두 채워졌다면 완료얼럿
         let fintxt = UIAlertController(title: "완료!", message: "등록이 완료되었습니다 :D", preferredStyle: .alert)
         
         let okact = UIAlertAction(title: "네", style: .cancel) { (action) in
+            //textfield에 있는 데이터 리셋 & 서버로 보내고 제목이랑 저자만 불러와서 테이블뷰의 레이블에 띄운다.
             
         }
         
@@ -84,6 +99,10 @@ class AddViewController: UIViewController {
         bookPrice.layer.borderWidth = 0.5
         bookPrice.layer.borderColor = UIColor.blue.cgColor
         bookPrice.layer.cornerRadius = 20
+        
+        userName.layer.borderWidth = 0.5
+        userName.layer.borderColor = UIColor.blue.cgColor
+        userName.layer.cornerRadius = 20
     }
     
 }

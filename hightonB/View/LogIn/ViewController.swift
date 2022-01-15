@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import Moya
+import RxSwift
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var userId: UITextField! //아이디
-    
     @IBOutlet weak var userPw: UITextField! //비번
     
     @IBAction func logBtn(_ sender: Any) {
@@ -50,6 +51,7 @@ class ViewController: UIViewController {
             guard let goVc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") else { return }
             goVc.modalPresentationStyle = .fullScreen
             self.present(goVc, animated: true)
+            
         }
         
         truetxt.addAction(okact)
@@ -76,3 +78,22 @@ class ViewController: UIViewController {
     }
 }
 
+//extension ViewController {
+//
+//    func setRequest() {
+//
+//        authProvider.request(.login("awdqqwd", "P@ssword")) { (result) in
+//            switch result {
+//            case let .success(let response):
+//                do {
+//                    let result = try? response.map(signData.self)
+//                    print(result)
+//                } catch(let err) {
+//                    print(err.localizedDescription)
+//                }
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
+//    }
+//}
