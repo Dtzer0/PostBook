@@ -14,9 +14,56 @@ class AddViewController: UIViewController {
     @IBOutlet weak var bookPrice: UITextField!
     
     @IBAction func addBooks(_ sender: Any) {
-        //하나라도 비어있으면 입력얼럿, 아니라면 신청완료 얼럿 띄워주기
         
-        //여기에서 신청한 북 데이터는 첫번째 페이지에 저장된다. ( 여기서 서버에 저장을 해서 그 데이터를 불러오는 건지는 모름 )
+        //하나라도 비어있으면 입력얼럿
+        guard let ftext = bookName.text, ftext.count > 0 else {
+            let emptytxt = UIAlertController(title: "안내", message: "빈칸을 채워주세요 :(", preferredStyle: .alert)
+            
+            let backact = UIAlertAction(title: "네", style: .cancel) { (action) in
+                
+            }
+            
+            emptytxt.addAction(backact)
+            present(emptytxt, animated: true, completion: nil)
+            
+            return
+        }
+        guard let stext = bookWriter.text, stext.count > 0 else {
+            let emptytxt = UIAlertController(title: "안내", message: "빈칸을 채워주세요 :(", preferredStyle: .alert)
+            
+            let backact = UIAlertAction(title: "네", style: .cancel) { (action) in
+                
+            }
+            
+            emptytxt.addAction(backact)
+            present(emptytxt, animated: true, completion: nil)
+            
+            return
+        }
+        guard let ttext = bookPrice.text, ttext.count > 0 else {
+            //단, 가격은 Int형으로 받아야하는데.. 일단 그것은 보류 ( 사용자의 장난이나 실수도 고려해야한다 )
+            let emptytxt = UIAlertController(title: "안내", message: "빈칸을 채워주세요 :(", preferredStyle: .alert)
+            
+            let backact = UIAlertAction(title: "네", style: .cancel) { (action) in
+                
+            }
+            
+            emptytxt.addAction(backact)
+            present(emptytxt, animated: true, completion: nil)
+            
+            return
+        }
+        
+        //형식에 맞게 모두 채워졌다면 완료얼럿
+        let fintxt = UIAlertController(title: "완료!", message: "등록이 완료되었습니다 :D", preferredStyle: .alert)
+        
+        let okact = UIAlertAction(title: "네", style: .cancel) { (action) in
+            
+        }
+        
+        fintxt.addAction(okact)
+        present(fintxt, animated: true, completion: nil)
+        
     }
     
     override func viewDidLoad() {

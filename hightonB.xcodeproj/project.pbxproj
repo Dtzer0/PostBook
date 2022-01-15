@@ -64,7 +64,6 @@
 		EC56F1EB27928B3B00B3EF27 /* hightonB */ = {
 			isa = PBXGroup;
 			children = (
-				EC56F2042792A38900B3EF27 /* images */,
 				EC56F2052792A42300B3EF27 /* View */,
 				EC56F1EC27928B3B00B3EF27 /* AppDelegate.swift */,
 				EC56F1EE27928B3B00B3EF27 /* SceneDelegate.swift */,
@@ -75,13 +74,6 @@
 				EC56F1F527928B3B00B3EF27 /* hightonB.xcdatamodeld */,
 			);
 			path = hightonB;
-			sourceTree = "<group>";
-		};
-		EC56F2042792A38900B3EF27 /* images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 		EC56F2052792A42300B3EF27 /* View */ = {

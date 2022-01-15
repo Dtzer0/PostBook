@@ -14,7 +14,47 @@ class ViewController: UIViewController {
     @IBOutlet weak var userPw: UITextField! //비번
     
     @IBAction func logBtn(_ sender: Any) {
-        //로그인성공 ( if문, 아닐경우 에러얼럿출력 )
+        
+        //하나라도 비어있으면 입력얼럿
+        guard let idtext = userId.text, idtext.count > 0 else {
+            let emptytxt = UIAlertController(title: "안내", message: "빈칸을 채워주세요 :(", preferredStyle: .alert)
+            
+            let backact = UIAlertAction(title: "네", style: .cancel) { (action) in
+                
+            }
+            
+            emptytxt.addAction(backact)
+            present(emptytxt, animated: true, completion: nil)
+            
+            return
+        }
+        
+        guard let pwtext = userPw.text, pwtext.count > 0 else {
+            let emptytxt = UIAlertController(title: "안내", message: "빈칸을 채워주세요 :(", preferredStyle: .alert)
+            
+            let backact = UIAlertAction(title: "네", style: .cancel) { (action) in
+                
+            }
+            
+            emptytxt.addAction(backact)
+            present(emptytxt, animated: true, completion: nil)
+            
+            return
+        }
+        
+        //형식에 맞게 모두 채워졌다면 완료얼럿
+        let truetxt = UIAlertController(title: "완료!", message: "로그인이 완료되었어요 :)", preferredStyle: .alert)
+        
+        let okact = UIAlertAction(title: "네", style: .cancel) { (action) in
+            //Main으로 이동
+            guard let goVc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") else { return }
+            goVc.modalPresentationStyle = .fullScreen
+            self.present(goVc, animated: true)
+        }
+        
+        truetxt.addAction(okact)
+        present(truetxt, animated: true, completion: nil)
+        
         
     }
     
