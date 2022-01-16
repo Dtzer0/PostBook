@@ -114,7 +114,7 @@
         <!--PostBook-->
         <scene sceneID="qVf-XF-gqA">
             <objects>
-                <viewController id="OVO-zw-85v" customClass="BookViewController" customModule="hightonB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OVO-zw-85v" customClass="AddViewController" customModule="hightonB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OQx-NO-Ok9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +160,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="PostBook" id="Zlo-fD-f2D"/>
                     <connections>
-                        <outlet property="listTable" destination="ISg-Fz-YcB" id="8re-TS-e6A"/>
+                        <outlet property="listTable" destination="ISg-Fz-YcB" id="bjd-HV-7F5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GCg-X7-VPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -182,7 +182,6 @@
                     <connections>
                         <segue destination="BOy-AS-xnT" kind="relationship" relationship="viewControllers" id="gc8-UL-RWU"/>
                         <segue destination="dsc-6c-2Yd" kind="relationship" relationship="viewControllers" id="1rO-Tf-0EP"/>
-                        <segue destination="b60-gC-B0k" kind="relationship" relationship="viewControllers" id="zYH-nO-Clt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSX-mY-abq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -257,7 +256,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ii2-yk-tcy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신청자 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ii2-yk-tcy">
                                 <rect key="frame" x="57" y="368" width="150" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="537-KC-cSp"/>
@@ -267,7 +266,7 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신청자 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y65-lf-c4s">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y65-lf-c4s">
                                 <rect key="frame" x="57" y="478" width="150" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="7AX-lx-bvx"/>
@@ -326,64 +325,6 @@
             </objects>
             <point key="canvasLocation" x="3768.115942028986" y="103.79464285714285"/>
         </scene>
-        <!--PostBook-->
-        <scene sceneID="lB8-d3-RgC">
-            <objects>
-                <viewController id="LMK-Co-Lya" customClass="ProfileViewController" customModule="hightonB" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0Uj-G7-XtE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ2-ap-Na4">
-                                <rect key="frame" x="132" y="683" width="150" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="91h-tN-NEQ"/>
-                                    <constraint firstAttribute="width" constant="150" id="j5j-v1-qZI"/>
-                                </constraints>
-                                <color key="tintColor" red="0.047058823529411764" green="0.4392156862745098" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="로그아웃"/>
-                                <connections>
-                                    <action selector="outBtn:" destination="LMK-Co-Lya" eventType="touchUpInside" id="WRK-tU-Ox0"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="XYL-tJ-ZEp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="XYL-tJ-ZEp" firstAttribute="bottom" secondItem="hQ2-ap-Na4" secondAttribute="bottom" constant="80" id="Big-Wu-O0m"/>
-                            <constraint firstItem="hQ2-ap-Na4" firstAttribute="leading" secondItem="XYL-tJ-ZEp" secondAttribute="leading" constant="132" id="Hye-wv-MiO"/>
-                            <constraint firstItem="XYL-tJ-ZEp" firstAttribute="trailing" secondItem="hQ2-ap-Na4" secondAttribute="trailing" constant="132" id="QS9-5O-Yle"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="PostBook" id="QQV-o8-6N5"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WhH-Zk-FGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3768.115942028986" y="813.61607142857144"/>
-        </scene>
-        <!--마이페이지-->
-        <scene sceneID="lLo-h4-Afy">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b60-gC-B0k" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="마이페이지" image="person.circle" catalog="system" id="r7C-BZ-ZdB"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sa3-tk-0uR">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.047058823530000002" green="0.43921568630000002" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="LMK-Co-Lya" kind="relationship" relationship="rootViewController" id="2oa-pt-Rze"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vvt-PY-MZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2857.971014492754" y="813.61607142857144"/>
-        </scene>
         <!--신청 도서 목록-->
         <scene sceneID="nCw-aR-Sgb">
             <objects>
@@ -432,7 +373,6 @@
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>
         <image name="highlighter" catalog="system" width="128" height="119"/>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -15,11 +15,11 @@
 		EC56F1F727928B3B00B3EF27 /* hightonB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC56F1F527928B3B00B3EF27 /* hightonB.xcdatamodeld */; };
 		EC56F1F927928B3D00B3EF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC56F1F827928B3D00B3EF27 /* Assets.xcassets */; };
 		EC56F1FC27928B3D00B3EF27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC56F1FA27928B3D00B3EF27 /* LaunchScreen.storyboard */; };
-		EC56F20B2792A46C00B3EF27 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F20A2792A46C00B3EF27 /* BookViewController.swift */; };
 		EC56F20D2792B51B00B3EF27 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F20C2792B51B00B3EF27 /* AddViewController.swift */; };
-		EC56F20F2792BA0800B3EF27 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F20E2792BA0800B3EF27 /* ProfileViewController.swift */; };
 		EC56F2162792EA5800B3EF27 /* books.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F2152792EA5800B3EF27 /* books.swift */; };
 		EC56F2182792F34300B3EF27 /* log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F2172792F34300B3EF27 /* log.swift */; };
+		EC56F21A27935A3400B3EF27 /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F21927935A3400B3EF27 /* Responses.swift */; };
+		EC56F21E2793744C00B3EF27 /* sonj.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F21D2793744C00B3EF27 /* sonj.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +35,11 @@
 		EC56F1F827928B3D00B3EF27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC56F1FB27928B3D00B3EF27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC56F1FD27928B3D00B3EF27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC56F20A2792A46C00B3EF27 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		EC56F20C2792B51B00B3EF27 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		EC56F20E2792BA0800B3EF27 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EC56F2152792EA5800B3EF27 /* books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = books.swift; sourceTree = "<group>"; };
 		EC56F2172792F34300B3EF27 /* log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = log.swift; sourceTree = "<group>"; };
+		EC56F21927935A3400B3EF27 /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
+		EC56F21D2793744C00B3EF27 /* sonj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sonj.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,19 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				EC56F2092792A44E00B3EF27 /* LogIn */,
-				EC56F2082792A44700B3EF27 /* BookList */,
 				EC56F2072792A43B00B3EF27 /* AddBook */,
-				EC56F2062792A43600B3EF27 /* MyPage */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		EC56F2062792A43600B3EF27 /* MyPage */ = {
-			isa = PBXGroup;
-			children = (
-				EC56F20E2792BA0800B3EF27 /* ProfileViewController.swift */,
-			);
-			path = MyPage;
 			sourceTree = "<group>";
 		};
 		EC56F2072792A43B00B3EF27 /* AddBook */ = {
@@ -130,14 +120,6 @@
 				EC56F20C2792B51B00B3EF27 /* AddViewController.swift */,
 			);
 			path = AddBook;
-			sourceTree = "<group>";
-		};
-		EC56F2082792A44700B3EF27 /* BookList */ = {
-			isa = PBXGroup;
-			children = (
-				EC56F20A2792A46C00B3EF27 /* BookViewController.swift */,
-			);
-			path = BookList;
 			sourceTree = "<group>";
 		};
 		EC56F2092792A44E00B3EF27 /* LogIn */ = {
@@ -153,6 +135,8 @@
 			children = (
 				EC56F2152792EA5800B3EF27 /* books.swift */,
 				EC56F2172792F34300B3EF27 /* log.swift */,
+				EC56F21927935A3400B3EF27 /* Responses.swift */,
+				EC56F21D2793744C00B3EF27 /* sonj.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,13 +256,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC56F21A27935A3400B3EF27 /* Responses.swift in Sources */,
 				EC56F1F727928B3B00B3EF27 /* hightonB.xcdatamodeld in Sources */,
 				EC56F1F127928B3B00B3EF27 /* ViewController.swift in Sources */,
 				EC56F20D2792B51B00B3EF27 /* AddViewController.swift in Sources */,
-				EC56F20B2792A46C00B3EF27 /* BookViewController.swift in Sources */,
+				EC56F21E2793744C00B3EF27 /* sonj.swift in Sources */,
 				EC56F2182792F34300B3EF27 /* log.swift in Sources */,
 				EC56F2162792EA5800B3EF27 /* books.swift in Sources */,
-				EC56F20F2792BA0800B3EF27 /* ProfileViewController.swift in Sources */,
 				EC56F1ED27928B3B00B3EF27 /* AppDelegate.swift in Sources */,
 				EC56F1EF27928B3B00B3EF27 /* SceneDelegate.swift in Sources */,
 			);
