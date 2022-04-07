@@ -13,7 +13,7 @@
 Moya로 네트워킹을 시도했었다.
 처음에는 enum, TargetType, JSON 양식에 문제가 없어서 Vc의 reloadData 구역이 잘못된줄 알았었다.
   
-4/4일에 다시 같은 양식으로 다른 URL을 받아와서 시도해 봤는데 잘되었다. 
+다시 같은 양식으로 다른 URL을 받아와서 시도해 봤는데 잘되었다. 
   <p align="left"><img src="https://user-images.githubusercontent.com/66416524/161653162-4c25941c-287d-4e56-8c5f-93b88c3711e4.png"  width="200" height="414">
   <img src="https://user-images.githubusercontent.com/66416524/161653206-2c7de00f-3abd-4072-a98a-e2abd54d6cc4.png"  width="200" height="414">
 
